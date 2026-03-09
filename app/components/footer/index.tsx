@@ -6,14 +6,13 @@ import { isMobile } from "react-device-detect";
 import * as THREE from "three";
 import { FOOTER_LINKS } from "../../constants";
 import { FooterLink } from "../../types";
-import { usePortalStore } from "@stores";
 
 const FooterLinkItem = ({ link }: { link: FooterLink }) => {
   const textRef = useRef<THREE.Group>(null);
   const [hovered, setHovered] = useState(false);
   const onPointerOver = () => setHovered(true);
   const onPointerOut = () => setHovered(false);
-  const setActivePortal = usePortalStore((state) => state.setActivePortal);
+
 
   const onClick = () => {
     window.open(link.url, '_blank');
