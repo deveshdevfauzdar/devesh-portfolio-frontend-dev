@@ -1,19 +1,18 @@
 import { Svg, Text, useCursor, useScroll } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
+import { useFrame, useThree } from "@react-three/fiber";
 import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
-import { isMobile } from "react-device-detect";
 import * as THREE from "three";
 import { FOOTER_LINKS } from "../../constants";
 import { FooterLink } from "../../types";
 
 const FooterLinkItem = ({ link }: { link: FooterLink }) => {
+  const { size } = useThree();
+  const isMobile = size.width < 768;
   const textRef = useRef<THREE.Group>(null);
   const [hovered, setHovered] = useState(false);
   const onPointerOver = () => setHovered(true);
   const onPointerOut = () => setHovered(false);
-
-
   const onClick = () => {
     window.open(link.url, '_blank');
   };
@@ -89,6 +88,8 @@ const FooterLinkItem = ({ link }: { link: FooterLink }) => {
 }
 
 const Footer = () => {
+  const { size } = useThree();
+  const isMobile = size.width < 768;
   const groupRef = useRef<THREE.Group>(null);
   const data = useScroll();
 
@@ -111,7 +112,7 @@ const Footer = () => {
 
   return (
     <group position={[0, -44, 18]} rotation={[-Math.PI / 2, 0, 0]} ref={groupRef}>
-      <group position={[isMobile ? -2.5 : -4, 0, 0]}>
+      <group position={[isMobile ? -2.2 : -4, 0, 0]}>
         {getLinks()}
       </group>
     </group>
