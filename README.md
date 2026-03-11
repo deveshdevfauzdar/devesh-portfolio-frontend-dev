@@ -5,7 +5,7 @@
   <p>A highly interactive, WebGL-powered personal portfolio website, featuring a scroll-based 3D experience, dynamic themes, and smooth animations.</p>
 
   <p>
-    <a href="[https://vercel.com/deveshdfauzdar-6264s-projects](https://devesh-portfolio-frontend-dev-44y8.vercel.app/)" target="_blank">
+    <a href="https://devesh-portfolio-frontend-dev-44y8.vercel.app" target="_blank">
       <img src="https://img.shields.io/badge/Live_Demo-Vercel-black?style=for-the-badge&logo=vercel" alt="Live Demo" />
     </a>
   </p>
