@@ -12,7 +12,7 @@ export const PROJECTS: Project[] = [
     title: 'TubeMind – YouTube Enhancer',
     date: '2026',
     subtext: 'A browser extension published on the Edge Add-ons Store that transforms YouTube into a learning tool. Features AI-powered summarisation, auto-notes, chapter generation, replay heatmap, watch analytics, and focus mode.',
-    url: 'https://github.com/deveshdevfauzdar',
+    url: 'https://microsoftedge.microsoft.com/addons/detail/tubemind-%E2%80%93-youtube-enhanc/fameiehkkpnjabodggfbkkdeifmgejhd',
   },
   {
     title: 'Kaprekar Constant – Trajectory Analysis',
